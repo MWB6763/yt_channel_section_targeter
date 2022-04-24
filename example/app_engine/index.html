@@ -55,11 +55,11 @@
               <hr>
               <br>
               <div>
-                <md-button class="md-raised md-primary" ng-click="ctrl.onAuthorize()">
+                <md-button class="md-raised md-primary" ng-click="ctrl.onAuthorize()" title="Authorize">
                   Authorize
                 </md-button>
-                <md-button class="md-raised" ng-click="ctrl.onRevokeAccess()">
-                  Revoke authorization
+                <md-button class="md-raised" ng-click="ctrl.onRevokeAccess()" title="Revoke Authorization">
+                  Revoke Authorization
                 </md-button>
               </div>
             </md-content>
@@ -93,11 +93,11 @@
                 <label>Content Owner (Optional)</label>
                 <input ng-model="ctrl.contentOwner">
               </md-input-container>
-              <md-button class="md-raised md-primary" ng-click="ctrl.onLoadSections()">
-                Retrieve sections
+              <md-button class="md-raised md-primary" ng-click="ctrl.onLoadSections()" title="Retrieve Sections">
+                Retrieve Sections
               </md-button>
-              <md-button class="md-raised" ng-click="ctrl.loadOwnChannelId()">
-                Get default channel ID
+              <md-button class="md-raised" ng-click="ctrl.loadOwnChannelId()" title="Get Default Channel ID">
+                Get Default Channel ID
               </md-button>
             </div>
           </md-tab>
@@ -119,7 +119,7 @@
             <md-content ng-show="ctrl.authentificated && ctrl.sectionsLoaded && ctrl.sections === null">
               <md-card layout-padding>
                 <div>
-                  Loading...
+                  Loading&hellip;
                   Please retry if it takes too long.
                 </div>
               </md-card>
@@ -130,7 +130,7 @@
                 <div class="channel-snippet" layout="column" flex="35">
                   <div ng-bind="ctrl.channel.snippet.title"></div>
                   <div>
-                    <a target="_blank" ng-href="https://www.youtube.com/channel/{{ctrl.channel.id}}"
+                    <a target="_blank" ng-href="https://youtube.com/channel/{{ctrl.channel.id}}"
                        ng-bind="ctrl.channel.id"></a>
                   </div>
                 </div>
@@ -175,7 +175,7 @@
                       <label>Title</label>
                       <input ng-model="section.snippet.title">
                     </md-input-container>
-                    <md-button ng-click="ctrl.onSectionRemove(section.id)">Remove</md-button>
+                    <md-button ng-click="ctrl.onSectionRemove(section.id)" title="Remove">Remove</md-button>
                   </div>
                   <md-input-container ng-show="ctrl.ifShowContentDetails(section.id)">
                     <label>Content details</label>
@@ -206,10 +206,10 @@
                 </md-card>
               </div>
               <div layout="row" flex>
-                <md-button class="md-raised" ng-click="ctrl.onSectionAdd()">Add a section</md-button>
+                <md-button class="md-raised" ng-click="ctrl.onSectionAdd()" title="Add a Section">Add a Section</md-button>
                 <span flex></span>
-                <md-button class="md-raised" ng-click="ctrl.onReset()">Reset</md-button>
-                <md-button class="md-raised md-primary" ng-click="ctrl.onSubmit()" ng-disable="sections.length == 0">Submit changes</md-button>
+                <md-button class="md-raised" ng-click="ctrl.onReset()" title="Reset">Reset</md-button>
+                <md-button class="md-raised md-primary" ng-click="ctrl.onSubmit()" ng-disable="sections.length == 0" title="Submit Changes">Submit Changes</md-button>
               </div>
             </md-content>
           </md-tab>
