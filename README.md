@@ -32,7 +32,7 @@ user interface and only accessible through API. More details can be found on the
 [Google Developers
 website](https://developers.google.com/youtube/v3/docs/channelSections).
 
-## Project objective
+## Project Objective
 
 This tool allows you to quickly setup a web UI to manage targeting settings of
 channel sections in your YouTube channel.
@@ -48,7 +48,7 @@ including instructions. You may find related code under *example/*.
 
 ### Publish a web app using App Script
 
-#### 1 - Copy the sample project
+#### 1 - Copy the Sample Project
 
 Make a copy of the [sample
 project](https://script.google.com/d/1RvfjHgevFFl3FnG8QMKbmGXd_azVpFBt-r94J1QzNdGcj0PNa96dHvkS/edit?usp=sharing)
@@ -56,7 +56,7 @@ from the *File* menu then *Make a copy*. Be careful of sharing settings so only
 relevant users/groups have access. Sharing settings are accessible through
 *File*, then *Share*.
 
-#### 2 - Enable API & get the OAuth Client ID
+#### 2 - Enable API & Get the OAuth Client ID
 
 Click *Resources*, then *Cloud Platform project*. On the prompted dialog, click
 the project link highlighted in blue. This brings you to the associated
@@ -73,14 +73,14 @@ Back to the copied App Script project. Open the file *script.html* on the left
 panel. Locate the placeholder for OAUTH2_CLIENT_ID in top lines of the file and
 replace its value with the value you just copied.
 
-#### 3 - Deploy the web app
+#### 3 - Deploy the Web App
 
 Click on *Publish*, then click on *Deploy as web app*. Click *Deploy* or
 *Update* and you will get the external link to the tool. **Remember** to set
 *Execute the app as* to *User accessing the web app*. If you want others to have
 access to the tool, change Who has access to the app* to **Anyone**.
 
-#### 4 - Add origin URL to authorization list
+#### 4 - Add Origin URL to Authorization List
 
 You now need a final step to setup the authentication. Visit the tool via the
 link you found in the previous step, click *Authorize* button and you should see
@@ -93,7 +93,7 @@ Now switch back to the Cloud Platform website opened on step 2. Click the only
 item on the Credentials list (the name should be *Apps Script*), paste the URL
 in the field under *Authorized JavaScript origins*. Click *Save*.
 
-#### 5 - You are all set
+#### 5 - You Are All Set
 
 The tool is now setup. Refresh the page and you should be able to authenticate
 now.
@@ -102,18 +102,18 @@ Besides copying the sample project, you can also setup your own App Script
 project from scratch with the help of code under *example/app_script/*.
 
 
-### Setup a simple Google App Engine project
+### Setup a Simple Google App Engine Project
 
 **Note:** This setup requires some basic technical skills.
 
-#### 1 - Create a App Engine project
+#### 1 - Create an App Engine Project
 
 Follow the steps listed on [Quickstart for Python App Engine Standard
 Environment](https://cloud.google.com/appengine/docs/standard/python/quickstart)
 to create a new App Engine application and setup the Google Cloud SDK. Note down
 the *Project ID* as we'll need it afterwards.
 
-#### 2 - Enable API & create OAuth Client ID
+#### 2 - Enable API & Create OAuth Client ID
 
 On the Cloud Console website, click the menu on top right and open
 *API Manager*. Click *ENABLE API* and find *YouTube Data API*, enable it.
@@ -125,14 +125,14 @@ instructions to add a product name. Then, add
 list and click *Create*. You may also modify these settings later. Copy the
 *Client ID* since we'll need it later.
 
-#### 3 - Download the code and configure
+#### 3 - Download the Code and Configure
 
 Download or clone the source code of this project. Open the
 *example/app_engine/static/channel_targeter.js* and locate the placeholder for
 *OAUTH2_CLIENT_ID* on the top. Replace the value in quotes to the *Client ID*
 you just created.
 
-#### 4 - Deploy the project to App Engine
+#### 4 - Deploy the Project to App Engine
 
 Open a terminal. Change directory to *example/app_engine/* and execute
 
@@ -140,7 +140,7 @@ Open a terminal. Change directory to *example/app_engine/* and execute
 
 This will deploy the code to your App Engine application.
 
-#### 5 - You are all set
+#### 5 - You Are All Set
 
 You should now be able to use the tool by visiting
 *https://**your_project_ID**.appspot.com/*
@@ -148,7 +148,7 @@ You should now be able to use the tool by visiting
 Note that by default only you have access to the tool. To set access, go to
 *IAM & Admin* on the Cloud Console website and add accounts.
 
-### Setup your own hosting
+### Setup Your Own Hosting
 
 If you need more control or have more specific requirements You can surely setup
 a webserver serving these files. Be sure to setup correct relative paths. For
@@ -160,7 +160,7 @@ OAuth2 Client ID and put it in the script. You also need to add your website's
 URL in the *Authorized JavaScript origins* list on the Google Cloud Platform
 website.
 
-## Technical details
+## Technical Details
 
 This UI and the logic of the tool is programmed using AngularJS v1 and Angular
 Material.
@@ -189,7 +189,7 @@ No. Due to security concerns, you cannot authorize API calls when the request
 is issued from local file system. You'll have to use a web server, which could
 work on localhost or remote hosts.
 
-### I have authentication problem saying "Origin mismatch", what do I do?
+### I have authentication problem saying "Origin Mismatch", what do I do?
 
 This problem is likely due to that the OAuth Client ID is not correctly set.
 You need to have a valid client ID of your own and add the website URL to the
@@ -230,5 +230,4 @@ should be more than enough. More information on quota can be found [Google
 Developers
 website](https://developers.google.com/youtube/v3/getting-started#quota).
 
-Copyright 2017 Google, Inc
-
+Copyright 2017 Google, Inc.
