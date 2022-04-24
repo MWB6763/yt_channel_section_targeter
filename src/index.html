@@ -119,7 +119,7 @@
             <md-content ng-show="ctrl.authentificated && ctrl.sectionsLoaded && ctrl.sections === null">
               <md-card layout-padding>
                 <div>
-                  Loading...
+                  Loading&hellip;
                   Please retry if it takes too long.
                 </div>
               </md-card>
@@ -130,7 +130,7 @@
                 <div class="channel-snippet" layout="column" flex="35">
                   <div ng-bind="ctrl.channel.snippet.title"></div>
                   <div>
-                    <a target="_blank" ng-href="https://www.youtube.com/channel/{{ctrl.channel.id}}"
+                    <a target="_blank" ng-href="https://youtube.com/channel/{{ctrl.channel.id}}"
                        ng-bind="ctrl.channel.id"></a>
                   </div>
                 </div>
@@ -175,7 +175,7 @@
                       <label>Title</label>
                       <input ng-model="section.snippet.title">
                     </md-input-container>
-                    <md-button ng-click="ctrl.onSectionRemove(section.id)">Remove</md-button>
+                    <md-button ng-click="ctrl.onSectionRemove(section.id)" title="Remove">Remove</md-button>
                   </div>
                   <md-input-container ng-show="ctrl.ifShowContentDetails(section.id)">
                     <label>Content details</label>
@@ -206,10 +206,10 @@
                 </md-card>
               </div>
               <div layout="row" flex>
-                <md-button class="md-raised" ng-click="ctrl.onSectionAdd()">Add a section</md-button>
+                <md-button class="md-raised" ng-click="ctrl.onSectionAdd()" title="Add a Section">Add a Section</md-button>
                 <span flex></span>
-                <md-button class="md-raised" ng-click="ctrl.onReset()">Reset</md-button>
-                <md-button class="md-raised md-primary" ng-click="ctrl.onSubmit()" ng-disable="sections.length == 0">Submit changes</md-button>
+                <md-button class="md-raised" ng-click="ctrl.onReset()" title="Reset">Reset</md-button>
+                <md-button class="md-raised md-primary" ng-click="ctrl.onSubmit()" ng-disable="sections.length == 0" title="Submit Changes">Submit Changes</md-button>
               </div>
             </md-content>
           </md-tab>
@@ -248,18 +248,18 @@
                       <li>
                         <b>languages:</b> populate the targeting value with a list of application
                         languages for which the channel section is visible. Use the
-                        <a target="_blank" href= "https://www.google.com/url?q=https://developers.google.com/apis-explorer/%23p/youtube/v3/youtube.i18nLanguages.list?part%3Dsnippet%26_h%3D1%26&amp;sa=D&amp;ust=1475590971126000&amp;usg=AFQjCNHafYgaBDs4bgwq7zbxjA4BXcK_Aw">
+                        <a target="_blank" href= "https://google.com/url?q=https://developers.google.com/apis-explorer/%23p/youtube/v3/youtube.i18nLanguages.list?part%3Dsnippet%26_h%3D1%26&amp;sa=D&amp;ust=1475590971126000&amp;usg=AFQjCNHafYgaBDs4bgwq7zbxjA4BXcK_Aw" title="i18nLanguages.list">
                         i18nLanguages.list</a> (click and press "Authorize and Execute") method to
                         retrieve a list of application languages that YouTube supports.
                       </li>
                       <li>
                         <b>regions:</b> populate the targeting value with a list of content regions
-                        where the channel section is visible. Use the <a target="_blank" href="https://www.google.com/url?q=https://developers.google.com/apis-explorer/%23p/youtube/v3/youtube.i18nRegions.list?part%3Dsnippet%26_h%3D2%26&amp;sa=D&amp;ust=1475590971128000&amp;usg=AFQjCNFYoik1ElFULrwby2irIUr5d9JV1w">
+                        where the channel section is visible. Use the <a target="_blank" href="https://google.com/url?q=https://developers.google.com/apis-explorer/%23p/youtube/v3/youtube.i18nRegions.list?part%3Dsnippet%26_h%3D2%26&amp;sa=D&amp;ust=1475590971128000&amp;usg=AFQjCNFYoik1ElFULrwby2irIUr5d9JV1w" title="i18nRegions.list">
                         i18nRegions.list</a> (click and press Authorize and Execute") method to
                         retrieve a list of content regions that YouTube supports.
                       </li>
                       <li><b>countries:</b> populate the targeting value with a list of
-                        <a target="_blank" href= "https://www.google.com/url?q=http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm&amp;sa=D&amp;ust=1475590971129000&amp;usg=AFQjCNEwDuhl8ZIMXiDTeeW8e_LFGkq-cQ">
+                        <a target="_blank" href= "https://google.com/url?q=http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm&amp;sa=D&amp;ust=1475590971129000&amp;usg=AFQjCNEwDuhl8ZIMXiDTeeW8e_LFGkq-cQ" title="ISO 3166-1 alpha-2 country codes">
                         ISO 3166-1 alpha-2 country codes</a> where the channel section is visible.
                       </li>
                     </ul>
@@ -271,7 +271,7 @@
               </ol>
               <p>
                 For any additional questions, consult the
-                <a target="_blank" href="">GitHub project page</a>
+                <a target="_blank" href="" title="GitHub Project Page">GitHub Project Page</a>
               </p>
             </md-card>
           </md-tab>
