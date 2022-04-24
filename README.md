@@ -5,14 +5,14 @@
 ## Index
 
 -   [Background](#background)
--   [Project objective](#project-objective)
+-   [Project Objective](#project-objective)
 -   [Setup](#setup)
-    -   [Publish a web app using App
+    -   [Publish a Web App Using App
         Script](#publish-a-web-app-using-app-script)
-    -   [Setup a simple Google App Engine
-        project](#setup-a-simple-google-app-engine-project)
-    -   [Setup your own hosting](#setup-your-own-hosting)
--   [Technical details](#technical-details)
+    -   [Setup a Simple Google App Engine
+        Project](#setup-a-simple-google-app-engine-project)
+    -   [Setup Your Own Hosting](#setup-your-own-hosting)
+-   [Technical Details](#technical-details)
 -   [FAQ](#faq)
 
 ## Background
