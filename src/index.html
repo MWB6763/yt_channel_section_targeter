@@ -55,11 +55,11 @@
               <hr>
               <br>
               <div>
-                <md-button class="md-raised md-primary" ng-click="ctrl.onAuthorize()">
+                <md-button class="md-raised md-primary" ng-click="ctrl.onAuthorize()" title="Authorize">
                   Authorize
                 </md-button>
-                <md-button class="md-raised" ng-click="ctrl.onRevokeAccess()">
-                  Revoke authorization
+                <md-button class="md-raised" ng-click="ctrl.onRevokeAccess()" title="Revoke Authorization">
+                  Revoke Authorization
                 </md-button>
               </div>
             </md-content>
@@ -93,11 +93,11 @@
                 <label>Content Owner (Optional)</label>
                 <input ng-model="ctrl.contentOwner">
               </md-input-container>
-              <md-button class="md-raised md-primary" ng-click="ctrl.onLoadSections()">
-                Retrieve sections
+              <md-button class="md-raised md-primary" ng-click="ctrl.onLoadSections()" title="Retrieve Sections">
+                Retrieve Sections
               </md-button>
-              <md-button class="md-raised" ng-click="ctrl.loadOwnChannelId()">
-                Get default channel ID
+              <md-button class="md-raised" ng-click="ctrl.loadOwnChannelId()" title="Get Default Channel ID">
+                Get Default Channel ID
               </md-button>
             </div>
           </md-tab>
